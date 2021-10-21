@@ -1300,7 +1300,9 @@ input[type="radio"] {
 .filterAddPopup {
   min-width: 390px;
   max-width: 390px;
-  padding: 13px 15px; }
+  padding: 13px 15px;
+  right: 0;
+  margin: 4px 0 0; }
   .filterAddPopup .create_filters_item, .filterAddPopup .dropdown {
     margin-bottom: 10px; }
   .filterAddPopup .create_filters_item:last-child {
@@ -1681,10 +1683,10 @@ input[type="radio"] {
   .tabs_main_header_btns {
     display: flex;
     align-items: center; }
-    .tabs_main_header_btns .btn {
+    .tabs_main_header_btns .dropdown {
       margin-right: 10px; }
-      .tabs_main_header_btns .btn:last-child {
-        margin-right: 0; }
+    .tabs_main_header_btns .btn:last-child {
+      margin-right: 0; }
 
 .tabs_main_outer {
   display: flex;
@@ -1696,7 +1698,10 @@ input[type="radio"] {
   .tabs_main_header {
     display: block; }
   .tabs_main_header .nav-pills {
-    margin-bottom: 13px; } }
+    margin-bottom: 13px; }
+  .filterAddPopup {
+    right: auto;
+    left: 0; } }
 
 /* table_wrapper */
 .table_wrapper {
@@ -1753,22 +1758,10 @@ input[type="radio"] {
     padding-left: 15px; }
   .content_table tbody td.vbottom {
     vertical-align: bottom; }
-  .content_table tbody tr.content_table-chain td {
-    background: #fff;
-    position: relative; }
-    .content_table tbody tr.content_table-chain td::before {
-      content: '';
-      position: absolute;
-      display: block;
-      height: 1px;
-      background: #e5e5e5;
-      left: 0;
-      right: 0;
-      top: 0; }
-  .content_table tbody tr.content_table-chain td.content_table_name {
-    padding-left: 48px; }
-    .content_table tbody tr.content_table-chain td.content_table_name::before {
-      left: 48px; }
+  .content_table tbody tr.chainrow td {
+    background: #fff; }
+  .content_table tbody tr.chainrow:nth-child(odd) td {
+    background: #f9f9f9; }
   .content_table_flex {
     display: flex;
     align-items: center;
@@ -2063,6 +2056,13 @@ input[type="radio"] {
   .tabs_main_outer .btn {
     display: block;
     margin: 0; }
+  .filterAddPopup {
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+    margin: 0; }
+  .filterAddPopup_scroll {
+    max-height: 200px; }
   .modal-dialog {
     margin: 0; }
   /* file_upload */

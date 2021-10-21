@@ -181,8 +181,8 @@
 
   <div class="tabs_main_header_btns">
     <div class="dropdown">
-      <button class="btn btn-light btn-filter" id="filterNav" data-bs-toggle="dropdown" data-bs-auto-close="false"><span>Фильтр</span></button>
-      <div class="dropdown-menu filterAddPopup" aria-labelledby="filterNav">
+      <button class="btn btn-light btn-filter js_showfilter"><span>Фильтр</span></button>
+      <div class="dropdown-menu dropdown-menu-end filterAddPopup">
         <div class="dropdown">
           <button class="btn btn-light btn-block btn-sm" id="addFilter" data-bs-toggle="dropdown">+ Добавить фильтр</button>
           <ul class="dropdown-menu filterPopup" aria-labelledby="addFilter">
@@ -220,10 +220,82 @@
   </div>
 </div><!-- /create_filters_item -->
 
+          <div class="create_filters_item">
+  <div class="create_filters_head">
+    <div class="create_filters_name">Группа подписчиков</div>
+    <button class="btn_delete"></button>
+  </div>
+  <div class="create_filters_content">
+    <select class="js-select" name="states[]" multiple="multiple">
+      <option value="AL">Alabama</option>
+      <option value="AL">Chicago</option>
+      <option value="AL">San-Diego</option>
+      <option value="AL">Los Angeles</option>
+      <option value="AL">New York</option>
+      <option value="AL">New Jersey</option>
+      <option value="WY">Wyoming</option>
+    </select>
+  </div>
+</div><!-- /create_filters_item -->
+
+          <div class="create_filters_item">
+  <div class="create_filters_head">
+    <div class="create_filters_name">Группа подписчиков</div>
+    <button class="btn_delete"></button>
+  </div>
+  <div class="create_filters_content">
+    <select class="js-select" name="states[]" multiple="multiple">
+      <option value="AL">Alabama</option>
+      <option value="AL">Chicago</option>
+      <option value="AL">San-Diego</option>
+      <option value="AL">Los Angeles</option>
+      <option value="AL">New York</option>
+      <option value="AL">New Jersey</option>
+      <option value="WY">Wyoming</option>
+    </select>
+  </div>
+</div><!-- /create_filters_item -->
+
+          <div class="create_filters_item">
+  <div class="create_filters_head">
+    <div class="create_filters_name">Группа подписчиков</div>
+    <button class="btn_delete"></button>
+  </div>
+  <div class="create_filters_content">
+    <select class="js-select" name="states[]" multiple="multiple">
+      <option value="AL">Alabama</option>
+      <option value="AL">Chicago</option>
+      <option value="AL">San-Diego</option>
+      <option value="AL">Los Angeles</option>
+      <option value="AL">New York</option>
+      <option value="AL">New Jersey</option>
+      <option value="WY">Wyoming</option>
+    </select>
+  </div>
+</div><!-- /create_filters_item -->
+
+          <div class="create_filters_item">
+  <div class="create_filters_head">
+    <div class="create_filters_name">Группа подписчиков</div>
+    <button class="btn_delete"></button>
+  </div>
+  <div class="create_filters_content">
+    <select class="js-select" name="states[]" multiple="multiple">
+      <option value="AL">Alabama</option>
+      <option value="AL">Chicago</option>
+      <option value="AL">San-Diego</option>
+      <option value="AL">Los Angeles</option>
+      <option value="AL">New York</option>
+      <option value="AL">New Jersey</option>
+      <option value="WY">Wyoming</option>
+    </select>
+  </div>
+</div><!-- /create_filters_item -->
+
         </div>
         <div class="modal-body-buttons">
           <button class="btn btn-light">Сбросить</button>
-          <button class="btn btn-primary">Применить</button>
+          <button class="btn btn-primary js_closefilter">Применить</button>
         </div>
       </div><!-- /filterAddPopup -->
     </div>

@@ -25,18 +25,6 @@ $(function() {
 		$(this).closest('tr').next('.content_table_hidden').toggleClass('opened');
 		return false;
 	});
-	
-	// js_show_chain
-	$('.js_show_chain').on('click', function() {
-		if ( !$(this).hasClass('active') ) {
-			$(this).addClass('active');
-			$(this).closest('.chainrow').next('.content_table-chain').addClass('opened');
-		} else {
-			$(this).removeClass('active');
-			$(this).closest('.chainrow').next('.content_table-chain').removeClass('opened');
-		}
-		return false;
-	});
 
 
 	// chips_show
@@ -80,6 +68,7 @@ $(function() {
 	$('.js-select').select2({
 		minimumResultsForSearch: 7
 	});
+	$('.js-select').select2({ dropdownParent: "#addGetters" });
 
 
 	// check-field-hidden
@@ -131,6 +120,17 @@ $(function() {
 		}
 	});
 	// select_social end
+
+
+	// filter popup
+	$('.js_showfilter').on('click', function() {
+		$(this).toggleClass('show');
+		$(this).closest('.dropdown').find('.filterAddPopup').fadeToggle(200);
+	});
+	$('.js_closefilter').on('click', function() {
+		$(this).closest('.dropdown').find('.js_showfilter').removeClass('show');
+		$(this).closest('.dropdown').find('.filterAddPopup').fadeOut(200);
+	});
 
 
 });

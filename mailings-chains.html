@@ -181,8 +181,8 @@
 
   <div class="tabs_main_header_btns">
     <div class="dropdown">
-      <button class="btn btn-light btn-filter" id="filterNav" data-bs-toggle="dropdown" data-bs-auto-close="false"><span>Фильтр</span></button>
-      <div class="dropdown-menu filterAddPopup" aria-labelledby="filterNav">
+      <button class="btn btn-light btn-filter js_showfilter"><span>Фильтр</span></button>
+      <div class="dropdown-menu dropdown-menu-end filterAddPopup">
         <div class="dropdown">
           <button class="btn btn-light btn-block btn-sm" id="addFilter" data-bs-toggle="dropdown">+ Добавить фильтр</button>
           <ul class="dropdown-menu filterPopup" aria-labelledby="addFilter">
@@ -220,10 +220,82 @@
   </div>
 </div><!-- /create_filters_item -->
 
+          <div class="create_filters_item">
+  <div class="create_filters_head">
+    <div class="create_filters_name">Группа подписчиков</div>
+    <button class="btn_delete"></button>
+  </div>
+  <div class="create_filters_content">
+    <select class="js-select" name="states[]" multiple="multiple">
+      <option value="AL">Alabama</option>
+      <option value="AL">Chicago</option>
+      <option value="AL">San-Diego</option>
+      <option value="AL">Los Angeles</option>
+      <option value="AL">New York</option>
+      <option value="AL">New Jersey</option>
+      <option value="WY">Wyoming</option>
+    </select>
+  </div>
+</div><!-- /create_filters_item -->
+
+          <div class="create_filters_item">
+  <div class="create_filters_head">
+    <div class="create_filters_name">Группа подписчиков</div>
+    <button class="btn_delete"></button>
+  </div>
+  <div class="create_filters_content">
+    <select class="js-select" name="states[]" multiple="multiple">
+      <option value="AL">Alabama</option>
+      <option value="AL">Chicago</option>
+      <option value="AL">San-Diego</option>
+      <option value="AL">Los Angeles</option>
+      <option value="AL">New York</option>
+      <option value="AL">New Jersey</option>
+      <option value="WY">Wyoming</option>
+    </select>
+  </div>
+</div><!-- /create_filters_item -->
+
+          <div class="create_filters_item">
+  <div class="create_filters_head">
+    <div class="create_filters_name">Группа подписчиков</div>
+    <button class="btn_delete"></button>
+  </div>
+  <div class="create_filters_content">
+    <select class="js-select" name="states[]" multiple="multiple">
+      <option value="AL">Alabama</option>
+      <option value="AL">Chicago</option>
+      <option value="AL">San-Diego</option>
+      <option value="AL">Los Angeles</option>
+      <option value="AL">New York</option>
+      <option value="AL">New Jersey</option>
+      <option value="WY">Wyoming</option>
+    </select>
+  </div>
+</div><!-- /create_filters_item -->
+
+          <div class="create_filters_item">
+  <div class="create_filters_head">
+    <div class="create_filters_name">Группа подписчиков</div>
+    <button class="btn_delete"></button>
+  </div>
+  <div class="create_filters_content">
+    <select class="js-select" name="states[]" multiple="multiple">
+      <option value="AL">Alabama</option>
+      <option value="AL">Chicago</option>
+      <option value="AL">San-Diego</option>
+      <option value="AL">Los Angeles</option>
+      <option value="AL">New York</option>
+      <option value="AL">New Jersey</option>
+      <option value="WY">Wyoming</option>
+    </select>
+  </div>
+</div><!-- /create_filters_item -->
+
         </div>
         <div class="modal-body-buttons">
           <button class="btn btn-light">Сбросить</button>
-          <button class="btn btn-primary">Применить</button>
+          <button class="btn btn-primary js_closefilter">Применить</button>
         </div>
       </div><!-- /filterAddPopup -->
     </div>
@@ -235,42 +307,13 @@
 
         <div class="table_scroll">
           <table class="content_table content_table-chains">
-            <thead>
-              <tr>
-                <td colspan="2">
-                  <div class="content_table_flex">
-                    <div class="dropdown">
-  <a class="btn btn-light btn-sort" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-expanded="false"><span></span></a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-    <li><a class="dropdown-item" href="#">Сначала новые</a></li>
-    <li><a class="dropdown-item" href="#">Сначала старые</a></li>
-    <li><a class="dropdown-item" href="#">По дате отправки</a></li>
-    <li><a class="dropdown-item" href="#">По дате архивирования, сначала новые</a></li>
-    <li><a class="dropdown-item" href="#">По дате архивирования, сначала старые</a></li>
-  </ul>
-</div>
-
-                    <div class="sm_search">
-  <form action="#">
-    <input type="text" class="sm_search_input" placeholder="Поиск по рассылкам">
-    <input type="submit" class="sm_search_btn">
-  </form>
-</div><!-- /sm_search -->
-
-                  </div>
-                </td>
-                <td>№</td>
-                <td>Создано</td>
-                <td colspan="2">Статус</td>
-              </tr>
-            </thead>
             <tbody>
               <tr class="chainrow">
   <td colspan="6">
     <div class="chainrow_entry">
       <div class="chainrow_entry_left">
         <div class="chainrow_title">Название цепочки сообщений 1</div>
-        <a href="#" class="more_link js_show_chain">Посмотреть цепочку</a>
+        <a href="#" class="more_link">Посмотреть цепочку</a>
       </div>
       <div class="dropdown">
   <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
@@ -291,190 +334,12 @@
       <li>Дата редактирования: 23.05.2021 12:45</li>
     </ul><!-- /table_meta -->
   </td>
-</tr><!-- /chainrow -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-<tr class="chainrow">
+</tr><!-- /chainrow --><tr class="chainrow">
   <td colspan="6">
     <div class="chainrow_entry">
       <div class="chainrow_entry_left">
         <div class="chainrow_title">Название цепочки сообщений 1</div>
-        <a href="#" class="more_link js_show_chain">Посмотреть цепочку</a>
+        <a href="#" class="more_link">Посмотреть цепочку</a>
       </div>
       <div class="dropdown">
   <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
@@ -495,190 +360,12 @@
       <li>Дата редактирования: 23.05.2021 12:45</li>
     </ul><!-- /table_meta -->
   </td>
-</tr><!-- /chainrow -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-<tr class="chainrow">
+</tr><!-- /chainrow --><tr class="chainrow">
   <td colspan="6">
     <div class="chainrow_entry">
       <div class="chainrow_entry_left">
         <div class="chainrow_title">Название цепочки сообщений 1</div>
-        <a href="#" class="more_link js_show_chain">Посмотреть цепочку</a>
+        <a href="#" class="more_link">Посмотреть цепочку</a>
       </div>
       <div class="dropdown">
   <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
@@ -699,190 +386,12 @@
       <li>Дата редактирования: 23.05.2021 12:45</li>
     </ul><!-- /table_meta -->
   </td>
-</tr><!-- /chainrow -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-<tr class="chainrow">
+</tr><!-- /chainrow --><tr class="chainrow">
   <td colspan="6">
     <div class="chainrow_entry">
       <div class="chainrow_entry_left">
         <div class="chainrow_title">Название цепочки сообщений 1</div>
-        <a href="#" class="more_link js_show_chain">Посмотреть цепочку</a>
+        <a href="#" class="more_link">Посмотреть цепочку</a>
       </div>
       <div class="dropdown">
   <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
@@ -903,190 +412,12 @@
       <li>Дата редактирования: 23.05.2021 12:45</li>
     </ul><!-- /table_meta -->
   </td>
-</tr><!-- /chainrow -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-<tr class="chainrow">
+</tr><!-- /chainrow --><tr class="chainrow">
   <td colspan="6">
     <div class="chainrow_entry">
       <div class="chainrow_entry_left">
         <div class="chainrow_title">Название цепочки сообщений 1</div>
-        <a href="#" class="more_link js_show_chain">Посмотреть цепочку</a>
+        <a href="#" class="more_link">Посмотреть цепочку</a>
       </div>
       <div class="dropdown">
   <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
@@ -1107,190 +438,12 @@
       <li>Дата редактирования: 23.05.2021 12:45</li>
     </ul><!-- /table_meta -->
   </td>
-</tr><!-- /chainrow -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-<tr class="chainrow">
+</tr><!-- /chainrow --><tr class="chainrow">
   <td colspan="6">
     <div class="chainrow_entry">
       <div class="chainrow_entry_left">
         <div class="chainrow_title">Название цепочки сообщений 1</div>
-        <a href="#" class="more_link js_show_chain">Посмотреть цепочку</a>
+        <a href="#" class="more_link">Посмотреть цепочку</a>
       </div>
       <div class="dropdown">
   <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
@@ -1311,190 +464,12 @@
       <li>Дата редактирования: 23.05.2021 12:45</li>
     </ul><!-- /table_meta -->
   </td>
-</tr><!-- /chainrow -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-<tr class="chainrow">
+</tr><!-- /chainrow --><tr class="chainrow">
   <td colspan="6">
     <div class="chainrow_entry">
       <div class="chainrow_entry_left">
         <div class="chainrow_title">Название цепочки сообщений 1</div>
-        <a href="#" class="more_link js_show_chain">Посмотреть цепочку</a>
+        <a href="#" class="more_link">Посмотреть цепочку</a>
       </div>
       <div class="dropdown">
   <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
@@ -1515,190 +490,12 @@
       <li>Дата редактирования: 23.05.2021 12:45</li>
     </ul><!-- /table_meta -->
   </td>
-</tr><!-- /chainrow -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-<tr class="chainrow">
+</tr><!-- /chainrow --><tr class="chainrow">
   <td colspan="6">
     <div class="chainrow_entry">
       <div class="chainrow_entry_left">
         <div class="chainrow_title">Название цепочки сообщений 1</div>
-        <a href="#" class="more_link js_show_chain">Посмотреть цепочку</a>
+        <a href="#" class="more_link">Посмотреть цепочку</a>
       </div>
       <div class="dropdown">
   <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
@@ -1719,190 +516,12 @@
       <li>Дата редактирования: 23.05.2021 12:45</li>
     </ul><!-- /table_meta -->
   </td>
-</tr><!-- /chainrow -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-<tr class="chainrow">
+</tr><!-- /chainrow --><tr class="chainrow">
   <td colspan="6">
     <div class="chainrow_entry">
       <div class="chainrow_entry_left">
         <div class="chainrow_title">Название цепочки сообщений 1</div>
-        <a href="#" class="more_link js_show_chain">Посмотреть цепочку</a>
+        <a href="#" class="more_link">Посмотреть цепочку</a>
       </div>
       <div class="dropdown">
   <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
@@ -1923,190 +542,12 @@
       <li>Дата редактирования: 23.05.2021 12:45</li>
     </ul><!-- /table_meta -->
   </td>
-</tr><!-- /chainrow -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-<tr class="chainrow">
+</tr><!-- /chainrow --><tr class="chainrow">
   <td colspan="6">
     <div class="chainrow_entry">
       <div class="chainrow_entry_left">
         <div class="chainrow_title">Название цепочки сообщений 1</div>
-        <a href="#" class="more_link js_show_chain">Посмотреть цепочку</a>
+        <a href="#" class="more_link">Посмотреть цепочку</a>
       </div>
       <div class="dropdown">
   <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
@@ -2128,184 +569,6 @@
     </ul><!-- /table_meta -->
   </td>
 </tr><!-- /chainrow -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table-chain">
-  <td class="content_table_name">Название рассылки</td>
-  <td class="content_table_more"><a href="#" class="more_link js_table_hidden">Подробнее</a></td>
-  <td class="content_table_num">7</td>
-  <td class="content_table_date">14.02.2021 13:52</td>
-  <td class="content_table_status">
-    <span class="chip">Целевая</span>
-    <span class="chip">Сразу</span>
-    
-  </td>
-  <td class="content_table_btns">
-    <div class="content_table_flex">
-      
-        <div class="dropdown">
-  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Статистика рассылки</a></li>
-    <li><a class="dropdown-item" href="#">Редактировать отправленные сообщения</a></li>
-    <li><a class="dropdown-item" href="#">Копировать рассылку</a></li>
-    <li><a class="dropdown-item" href="#">Копировать в другое сообщество</a></li>
-    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal" data-bs-target="#removeSubs">Удалить рассылку</a></li>
-    <li><a class="dropdown-item color-danger" href="#">Удалить отправленные сообщения</a></li>
-  </ul>
-</div>
-
-      
-      
-      <button class="btn btn-light">Изменить</button>
-      
-        <button class="btn btn-primary btn-play js_play">
-          <span>Запустить</span>
-        </button>
-      
-    </div>
-  </td>
-</tr><!-- /tr -->
-
-<tr class="content_table_hidden">
-  <td colspan="2">
-    <div class="content_table_text">
-      Рассылка от сообщества может быть отправлена только людям, которые дали на это добро (как минимум вступали в диалог с вашим сообществом, то есть дали согласие на получение от вас личных сообщений).
-    </div>
-    <ul class="table_meta">
-      <li>Вложения:</li>
-      <li><a href="#" class="link_icon link_icon-pic">Изображение</a></li>
-      <li><a href="#" class="link_icon link_icon-doc">Документ</a></li>
-    </ul>
-  </td>
-  <td colspan="4" class="vbottom">
-    <ul class="table_meta table_meta-right">
-      <li>Доставлено: 546</li>
-      <li>Не доставлено: 24</li>
-      <li>Прочитано: 234</li>
-      <li>Переходы: 23</li>
-      <li>Отписались: 1</li>
-    </ul>
-  </td>
-</tr><!-- /tr -->
-
             </tbody>
           </table>
         </div><!-- /table_scroll -->
