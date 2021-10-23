@@ -1092,10 +1092,12 @@ input[type="radio"] {
 /* badge */
 .badge {
   background: #D8D8D8;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  color: var(--color-grey); }
+  border-radius: 14px;
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  color: var(--color-grey);
+  display: inline-block;
+  padding: 5px 8px; }
   .badge-primary {
     background: #5C90D2;
     color: #fff; }
