@@ -133,6 +133,31 @@ $(function() {
 	});
 
 
+	// new mail radio buttons
+	$('#one-mailing').on('change', function() {
+		$('.othersubs, #chain-subs, .chain_subs_group, #subs-event').hide();
+		$('#one-subs').fadeIn(200);
+	});
+	$('#target-mailing').on('change', function() {
+		$('.othersubs, #chain-subs, .chain_subs_group, #subs-event').hide();
+		$('#target-subs').fadeIn(200);
+	});
+	$('#chain-mailing').on('change', function() {
+		$('.othersubs, .not_chain_subs, #subs-event').hide();
+		$('#chain-subs, .chain_subs_group').fadeIn(200);
+		$('.js-select').select2({
+			minimumResultsForSearch: 7
+		});
+	});
+	$('#event-mailing').on('change', function() {
+		$('.othersubs, .not_chain_subs').hide();
+		$('#chain-subs, .chain_subs_group, #subs-event').fadeIn(200);
+		$('.js-select').select2({
+			minimumResultsForSearch: 7
+		});
+	});
+
+
 });
 
 // file input JS

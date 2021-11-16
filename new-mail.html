@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.3/swiper-bundle.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"> -->
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
 	<!--[if IE]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
 </head>
@@ -212,31 +212,30 @@
 					</div><!-- /btn-list -->
 
 					<div class="form-group">
-						<div class="form-label">Тип рассылки</div>
-						<div class="form-group">
-							<ul class="nav nav-tabbed">
-								<li><a class="nav-link btn btn-light btn-send active" href="#" data-bs-toggle="tab" data-bs-target="#single-subs">
-									<span>Разовая рассылка</span>
-								</a></li>
-								<li><a class="nav-link btn btn-light btn-target" href="#" data-bs-toggle="tab" data-bs-target="#target-subs">
-									<span>Целевая рассылка</span>
-								</a></li>
-								<li><a class="nav-link btn btn-light btn-chain" href="#" data-bs-toggle="tab" data-bs-target="#subs-chain">
-									<span>Цепочка рассылок</span>
-								</a></li>
-								<li><a class="nav-link btn btn-light btn-events" href="#" data-bs-toggle="tab" data-bs-target="#subs-events">
-									<span>Рассылки по событиям</span>
-								</a></li>
-							</ul>
-						</div>
+						<div class="form-label">Тип рассылки</div>						
+						<div class="radio-group">
+							<label class="radio-group-item">
+								<input type="radio" name="type-mailing" id="one-mailing" checked>
+								<span class="btn btn-light btn-send"><span>Разовая рассылка</span></span>
+							</label><!-- /radio-group-item -->
+							<label class="radio-group-item">
+								<input type="radio" name="type-mailing" id="target-mailing">
+								<span class="btn btn-light btn-target"><span>Целевая рассылка</span></span>
+							</label><!-- /radio-group-item -->
+							<label class="radio-group-item">
+								<input type="radio" name="type-mailing" id="chain-mailing">
+								<span class="btn btn-light btn-chain"><span>Цепочка рассылок</span></span>
+							</label><!-- /radio-group-item -->
+							<label class="radio-group-item">
+								<input type="radio" name="type-mailing" id="event-mailing">
+								<span class="btn btn-light btn-events"><span>Рассылки по событиям</span></span>
+							</label><!-- /radio-group-item -->							
+						</div><!-- /radio-group -->
 					</div><!-- /form-group -->
 
-					<div class="tab-content">
 
-						<!-- Разовая рассылка -->
-						<div class="tab-pane fade show active" id="single-subs">
-							<div class="form-group">
-								<div class="form-field">
+					<div class="form-group othersubs" id="one-subs">
+						<div class="form-field">
   <label class="check-field">
     <input type="checkbox" name="check">
     Отправить всем подписчикам 
@@ -251,117 +250,16 @@
   
 </div>
 
-								<div class="btn-list">
-									<div class="btn btn-lightext">Получателей: 141</div>
-									<button class="btn btn-light btn-filter"><span>Добавить фильтры</span></button>
-									<button class="btn btn-light color-danger">Сбросить фильтры</button>
-								</div><!-- /btn-list -->
-							</div><!-- /form-group -->
-		
-							<div class="form-group">
-								<div class="form-field">
-  <label class="form-label">Дата и время запуска рассылки <small>(время московское)</small></label>
-  
-  
-    <input type="text" class="form-control form-control-date form-control-short" placeholder="13 мая 2021 18:50">
-  
-  
-
-  
-  
-  
-</div>
-							</div><!-- /form-group -->
-		
-							<div class="form-group">
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    Считать переходы по ссылкам
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-
-  
-
-  
-</div>
-
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    DeepLink
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-
-  
-
-  
-</div>
-
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    Не создавать первый сниппет
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-
-  
-
-  
-</div>
-
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    Удалить письмо у подписчика
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-  <div class="check-field-hidden">
-    <div class="alert alert-warning" role="alert">
-      Будут удалены сообщения, которым с момента отправки не более 24-х часов
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <div class="choose_time_line">
-      <label>Через</label>
-      <input type="text" class="form-control" placeholder="00">
-      <label>часов</label>
-      <input type="text" class="form-control" placeholder="00">
-      <label>минут</label>
-      <select class="default_select">
-        <option>после отправки</option>
-        <option>После прочтения</option>
-        <option>После отправки, только непрочитанные</option>
-      </select>
-    </div><!-- /choose_time_line -->
-  </div>
-  
-
-  
-
-  
-</div>
-
-							</div><!-- /form-group -->
-						</div>
-						<!-- /Разовая рассылка -->
+						<div class="btn-list">
+							<div class="btn btn-lightext">Получателей: 141</div>
+							<button class="btn btn-light btn-filter"><span>Добавить фильтры</span></button>
+							<button class="btn btn-light color-danger">Сбросить фильтры</button>
+						</div><!-- /btn-list -->
+					</div><!-- /form-group -->
 
 
-						<!-- Целевая рассылка -->
-						<div class="tab-pane" id="target-subs">
-							<div class="form-group form-group-short">
-								<div class="form-field">
+					<div class="form-group form-group-short othersubs" id="target-subs">
+						<div class="form-field">
   <label class="form-label">Получатели</label>
   
   
@@ -377,15 +275,16 @@
   
   
 </div>
-								<div class="btn-list">
-									<div class="btn btn-lightext">Получателей: 141</div>
-									<button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addGetters">Добавить получателей</button>
-									<button class="btn btn-light color-danger">Очистить</button>
-								</div><!-- /btn-list -->
-							</div><!-- /form-group -->
-		
-							<div class="form-group">
-								<div class="form-field">
+						<div class="btn-list">
+							<div class="btn btn-lightext">Получателей: 141</div>
+							<button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addGetters">Добавить получателей</button>
+							<button class="btn btn-light color-danger">Очистить</button>
+						</div><!-- /btn-list -->
+					</div><!-- /form-group -->
+
+
+					<div class="form-group not_chain_subs">
+						<div class="form-field">
   <label class="form-label">Дата и время запуска рассылки <small>(время московское)</small></label>
   
   
@@ -397,116 +296,50 @@
   
   
 </div>
-							</div><!-- /form-group -->
-		
-							<div class="form-group">
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    Считать переходы по ссылкам
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
+					</div><!-- /form-group -->
 
-  
+					
+					<div id="chain-subs">
+						<div class="form-group form-group-short">
+							<label class="form-label">Группы подписчиков</label>
+							<select class="js-select" multiple>
+								<option>Группа подписчиков 1</option>
+								<option>Тестовая группа</option>
+							</select>
+						</div><!-- /form-group -->
 
-  
-</div>
-
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    DeepLink
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-
-  
-
-  
-</div>
-
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    Не создавать первый сниппет
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-
-  
-
-  
-</div>
-
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    Удалить письмо у подписчика
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-  <div class="check-field-hidden">
-    <div class="alert alert-warning" role="alert">
-      Будут удалены сообщения, которым с момента отправки не более 24-х часов
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <div class="choose_time_line">
-      <label>Через</label>
-      <input type="text" class="form-control" placeholder="00">
-      <label>часов</label>
-      <input type="text" class="form-control" placeholder="00">
-      <label>минут</label>
-      <select class="default_select">
-        <option>после отправки</option>
-        <option>После прочтения</option>
-        <option>После отправки, только непрочитанные</option>
-      </select>
-    </div><!-- /choose_time_line -->
-  </div>
-  
-
-  
-
-  
-</div>
-
-							</div><!-- /form-group -->
-						</div>
-						<!-- /Целевая рассылка -->
+						<div class="form-group form-group-short">
+							<label class="form-label">За исключением</label>
+							<select class="js-select" multiple>
+								<option>Группа подписчиков 1</option>
+								<option>Группа подписчиков 2</option>
+								<option>Группа подписчиков 3</option>
+								<option>Группа подписчиков 4</option>
+								<option>Группа подписчиков 5</option>
+							</select>
+						</div><!-- /form-group -->
+						<div></div>
+					</div><!-- #chain-subs -->
 
 
-						<!-- Цепочка рассылок -->
-						<div class="tab-pane" id="subs-chain">
-							<div class="form-group form-group-short">
-								<label class="form-label">Группы подписчиков</label>
-								<select class="js-select" multiple>
-									<option>Группа подписчиков 1</option>
-									<option>Тестовая группа</option>
-								</select>
-							</div><!-- /form-group -->
+					<div class="form-group form-group-short" id="subs-event">
+						<label class="form-label">
+							Событие
+							<span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
+						</label>
+						<select class="js-select">
+							<option>Группа подписчиков 1</option>
+							<option>Группа подписчиков 2</option>
+							<option>Группа подписчиков 3</option>
+							<option>Группа подписчиков 4</option>
+							<option>Группа подписчиков 5</option>
+						</select>
+					</div><!-- /form-group -->
+					
 
-							<div class="form-group form-group-short">
-								<label class="form-label">За исключением</label>
-								<select class="js-select" multiple>
-									<option>Группа подписчиков 1</option>
-									<option>Группа подписчиков 2</option>
-									<option>Группа подписчиков 3</option>
-									<option>Группа подписчиков 4</option>
-									<option>Группа подписчиков 5</option>
-								</select>
-							</div><!-- /form-group -->
-
-							<div class="form-group">
-								<div class="form-field">
+					<div class="form-group">
+						<div class="chain_subs_group">
+							<div class="form-field">
   <label class="check-field">
     <input type="checkbox" name="check">
     Подписались за время
@@ -535,7 +368,7 @@
   
 </div>
 
-								<div class="form-field">
+							<div class="form-field">
   <label class="check-field">
     <input type="checkbox" name="check">
     Отложить рассылку с момента подписки
@@ -562,7 +395,10 @@
   
 </div>
 
-								<div class="form-field">
+							<div></div>
+						</div>
+
+						<div class="form-field">
   <label class="check-field">
     <input type="checkbox" name="check">
     Считать переходы по ссылкам
@@ -577,7 +413,7 @@
   
 </div>
 
-								<div class="form-field">
+						<div class="form-field">
   <label class="check-field">
     <input type="checkbox" name="check">
     DeepLink
@@ -592,7 +428,7 @@
   
 </div>
 
-								<div class="form-field">
+						<div class="form-field">
   <label class="check-field">
     <input type="checkbox" name="check">
     Не создавать первый сниппет
@@ -607,7 +443,7 @@
   
 </div>
 
-								<div class="form-field">
+						<div class="form-field">
   <label class="check-field">
     <input type="checkbox" name="check">
     Удалить письмо у подписчика
@@ -641,187 +477,7 @@
   
 </div>
 
-							</div><!-- /form-group -->
-						</div>
-						<!-- /Цепочка рассылок -->
-
-
-						<!-- Рассылки по событиям -->
-						<div class="tab-pane" id="subs-events">
-							<div class="form-group form-group-short">
-								<label class="form-label">Группы подписчиков</label>
-								<select class="js-select" multiple>
-									<option>Группа подписчиков 1</option>
-									<option>Тестовая группа</option>
-								</select>
-							</div><!-- /form-group -->
-
-							<div class="form-group form-group-short">
-								<label class="form-label">За исключением</label>
-								<select class="js-select" multiple>
-									<option>Группа подписчиков 1</option>
-									<option>Группа подписчиков 2</option>
-									<option>Группа подписчиков 3</option>
-									<option>Группа подписчиков 4</option>
-									<option>Группа подписчиков 5</option>
-								</select>
-							</div><!-- /form-group -->
-
-							<div class="form-group form-group-short">
-								<label class="form-label">
-									Событие
-									<span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-								</label>
-								<select class="js-select">
-									<option>Группа подписчиков 1</option>
-									<option>Группа подписчиков 2</option>
-									<option>Группа подписчиков 3</option>
-									<option>Группа подписчиков 4</option>
-									<option>Группа подписчиков 5</option>
-								</select>
-							</div><!-- /form-group -->
-
-							<div class="form-group">
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    Подписались за время
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-
-  
-    <div class="check-field-hidden">
-      <div class="choose_time_line">
-        <label>С</label>
-        <input type="text" class="form-control" placeholder="00">
-        <label>час</label>
-        <input type="text" class="form-control" placeholder="00">
-        <label>минут по</label>
-        <input type="text" class="form-control" placeholder="00">
-        <label>час</label>
-        <input type="text" class="form-control" placeholder="00">
-        <label>минут</label>
-      </div><!-- /choose_time_line -->
-    </div>
-  
-
-  
-</div>
-
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    Отложить рассылку с момента подписки
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-
-  
-
-  
-    <div class="check-field-hidden">
-      <div class="choose_time_line">
-        <label>Через</label>
-        <input type="text" class="form-control" placeholder="00">
-        <label>дней</label>
-        <input type="text" class="form-control" placeholder="00">
-        <label>часов</label>
-        <input type="text" class="form-control" placeholder="00">
-        <label>минут</label>
-      </div><!-- /choose_time_line -->
-    </div>
-  
-</div>
-
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    Считать переходы по ссылкам
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-
-  
-
-  
-</div>
-
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    DeepLink
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-
-  
-
-  
-</div>
-
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    Не создавать первый сниппет
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-
-  
-
-  
-</div>
-
-								<div class="form-field">
-  <label class="check-field">
-    <input type="checkbox" name="check">
-    Удалить письмо у подписчика
-    
-      <span class="badge badge-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Включение данной опции означает">?</span>
-    
-  </label>
-  
-  <div class="check-field-hidden">
-    <div class="alert alert-warning" role="alert">
-      Будут удалены сообщения, которым с момента отправки не более 24-х часов
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <div class="choose_time_line">
-      <label>Через</label>
-      <input type="text" class="form-control" placeholder="00">
-      <label>часов</label>
-      <input type="text" class="form-control" placeholder="00">
-      <label>минут</label>
-      <select class="default_select">
-        <option>после отправки</option>
-        <option>После прочтения</option>
-        <option>После отправки, только непрочитанные</option>
-      </select>
-    </div><!-- /choose_time_line -->
-  </div>
-  
-
-  
-
-  
-</div>
-
-							</div><!-- /form-group -->
-						</div>
-						<!-- /Рассылки по событиям -->
-
-					</div><!-- /tab-content -->
+					</div><!-- /form-group -->
 
 
 					<div class="btn-list">
