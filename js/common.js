@@ -133,6 +133,12 @@ $(function() {
 	});
 
 
+	// Select2
+	$('.js-select').select2({
+		minimumResultsForSearch: 7
+	});
+
+
 	// new mail radio buttons
 	$('#one-mailing').on('change', function() {
 		$('.othersubs, #chain-subs, .chain_subs_group, #subs-event').hide();
